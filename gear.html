@@ -14,28 +14,28 @@
 </html>
 <body>
     <!-- Header -->
-    <header>
+    <header class="header">
       <!-- Home Anchor -->
-      <div class="brand">
-        <a class="logo-text" href="index.html">The Iron Path</a>
+      <div class="header__brand">
+        <a class="header__brand__logo" href="index.html">The Iron Path</a>
       </div>
 
       <!-- Hamburger dropdown -->
-      <nav class="nav-menu" aria-label="header-menu">
+      <nav class="header__nav" aria-label="header-menu">
         <input
           type="checkbox"
           id="hamburger-toggle"
-          class="hamburger-checkbox"
+          class="header__nav__toggle-input"
         />
 
-        <ul class="nav-links hamburger-links">
-          <li><a class="light-link" href="gear.html">Gear Needed</a></li>
-          <li><a class="light-link" href="difficulty.html">Difficulty Ratings</a></li>
-          <li><a class="light-link" href="locations.html">Locations</a></li>
-          <li><a class="light-link" href="anecdote.html">Personal Anecdote</a></li>
+        <ul class="header__nav__links header__nav__links--hamburger">
+          <li><a class="header__nav__link header__nav__link--light" href="gear.html">Gear Needed</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="difficulty.html">Difficulty Ratings</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="locations.html">Locations</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="anecdote.html">Personal Anecdote</a></li>
         </ul>
 
-        <label for="hamburger-toggle" class="hamburger-button"></label>
+        <label for="hamburger-toggle" class="header__nav__toggle-button"></label>
       </nav>
     </header>
     <!-- End Header -->
@@ -43,7 +43,7 @@
     <!-- Main Home Content -->
     <main>
       <!-- Introduction -->
-      <section id="introduction-gear">
+      <section class="introduction-gear">
         <h1>The Gear You'll Need</h1>
         <p>
           Embarking on a via ferrata adventure requires not just a spirit of adventure, but also the right equipment to ensure your safety and enjoyment. While the steel cables and rungs provide assistance, having the proper personal gear is non-negotiable for a successful climb. This guide covers the essential pieces of equipment you'll need before you set foot on the iron path.
@@ -51,20 +51,20 @@
       </section>
 
       <!-- Gear List -->
-      <section id="gear-list">
+      <section class="gear-list">
         
-        <div class="gear-item">
+        <div class="gear-list__item">
           <h2>Helmet</h2>
-          <img src="" alt="" class="gear-item-image">
+          <img src="" alt="" class="gear-list__item__image">
           <p>A climbing helmet is your most important piece of protective gear, safeguarding you from falling rocks or debris from climbers above. It also protects your head in the event of a slip or fall against the rock face. Always choose a helmet specifically designed and rated for climbing to ensure it meets rigorous safety standards for impact protection.</p>
-          <div class="gear-cost">
+          <div class="gear-list__item__cost">
             <h3>Typical Costs</h3>
-            <div class="cost-tile-container">
-              <div class="cost-tile">
+            <div class="gear-list__item__cost__container">
+              <div class="gear-list__item__cost__tile">
                 <h4>Rental:</h4>
                 <p>~$10</p>
               </div>
-              <div class="cost-tile">
+              <div class="gear-list__item__cost__tile">
                 <h4>Purchase:</h4>
                 <p>~$80</p>
               </div>
@@ -72,18 +72,18 @@
           </div>
         </div>
 
-        <div class="gear-item">
+        <div class="gear-list__item">
           <h2>Harness</h2>
-          <img src="" alt="" class="gear-item-image">
+          <img src="" alt="" class="gear-list__item__image">
           <p>You will need a standard climbing harness, which allows you to securely attach yourself to the via ferrata's cable system. This piece of equipment fits snugly around your waist and legs, designed to distribute the force of a potential fall safely across your body. Ensure your harness is properly adjusted and comfortable before you begin your climb, as you'll be wearing it for the entire duration of the route.</p>
-          <div class="gear-cost">
+          <div class="gear-list__item__cost">
             <h3>Typical Costs</h3>
-            <div class="cost-tile-container">
-              <div class="cost-tile">
+            <div class="gear-list__item__cost__container">
+              <div class="gear-list__item__cost__tile">
                 <h4>Rental:</h4>
                 <p>~$10</p>
               </div>
-              <div class="cost-tile">
+              <div class="gear-list__item__cost__tile">
                 <h4>Purchase:</h4>
                 <p>~$70</p>
               </div>
@@ -91,18 +91,18 @@
           </div>
         </div>
 
-        <div class="gear-item">
+        <div class="gear-list__item">
           <h2>Fall-Arrest System</h2>
-          <img src="" alt="" class="gear-item-image">
+          <img src="" alt="" class="gear-list__item__image">
           <p>The via ferrata set, also known as a fall-arrest system, is a specialized lanyard with two carabiners that connects your harness to the steel safety cable. This system features a crucial energy absorber designed to deploy and cushion the impact of a fall, significantly reducing the forces on your body. Always use a modern set that meets current safety standards and familiarize yourself with its operation before starting your ascent.</p>
-          <div class="gear-cost">
+          <div class="gear-list__item__cost">
             <h3>Typical Costs</h3>
-            <div class="cost-tile-container">
-              <div class="cost-tile">
+            <div class="gear-list__item__cost__container">
+              <div class="gear-list__item__cost__tile">
                 <h4>Rental:</h4>
                 <p>~$20</p>
               </div>
-              <div class="cost-tile">
+              <div class="gear-list__item__cost__tile">
                 <h4>Purchase:</h4>
                 <p>~$150</p>
               </div>
@@ -110,18 +110,18 @@
           </div>
         </div>
 
-        <div class="gear-item">
+        <div class="gear-list__item">
           <h2>Footwear</h2>
-          <img src="" alt="" class="gear-item-image">
+          <img src="" alt="" class="gear-list__item__image">
           <p>Sturdy and supportive footwear is critical for navigating the varied terrain of a via ferrata, which can include slick rock, metal rungs, and dirt trails. Approach shoes or light hiking boots with sticky rubber soles are ideal, providing the necessary grip and foot protection for a secure climb. Avoid using running shoes or any open-toed footwear, as they lack the rigidity and protection required for this activity.</p>
-          <div class="gear-cost">
+          <div class="gear-list__item__cost">
             <h3>Typical Costs</h3>
-            <div class="cost-tile-container">
-              <div class="cost-tile">
+            <div class="gear-list__item__cost__container">
+              <div class="gear-list__item__cost__tile">
                 <h4>Rental:</h4>
                 <p>N/A</p>
               </div>
-              <div class="cost-tile">
+              <div class="gear-list__item__cost__tile">
                 <h4>Purchase:</h4>
                 <p>~$150</p>
               </div>
@@ -132,26 +132,28 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-left">
+    <footer class="footer">
+      <div class="footer__left">
         <!-- Home Anchor -->
-        <div class="brand">
-          <a class="logo-text" href="index.html">The Iron Path</a>
+        <div class="footer__brand">
+          <a class="footer__brand__logo" href="index.html">The Iron Path</a>
         </div>
       </div>
 
-      <div class="footer-right">
+      <div class="footer__right">
         <!-- Footer navigation -->
-        <nav class="footer-nav-menu" aria-label="footer-menu">
-          <ul class="nav-links">
-            <li><a class="light-link" href="gear.html">Gear Needed</a></li>
-            <li><a class="light-link" href="difficulty.html">Difficulty Ratings</a></li>
-            <li><a class="light-link" href="locations.html">Locations</a></li>
-            <li><a class="light-link" href="anecdote.html">Personal Anecdote</a></li>
+        <nav class="footer__nav" aria-label="footer-menu">
+          <ul class="footer__nav__links">
+            <li><a class="footer__nav__link footer__nav__link--light" href="gear.html">Gear Needed</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="difficulty.html">Difficulty Ratings</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="locations.html">Locations</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="anecdote.html">Personal Anecdote</a></li>
           </ul>
         </nav>
       </div>
-        <p class="easteregg">What are you doing down here?</p>
+
+      <div class="footer__easteregg">
+        <p class="footer__easteregg--text">What are you doing down here?</p>
       </div>
     </footer>
     <!-- End Footer -->

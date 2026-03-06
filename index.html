@@ -12,30 +12,30 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 </html>
-<body>
+  <body>
     <!-- Header -->
-    <header>
+    <header class="header">
       <!-- Home Anchor -->
-      <div class="brand">
-        <a class="logo-text" href="index.html">The Iron Path</a>
+      <div class="header__brand">
+        <a class="header__brand__logo" href="index.html">The Iron Path</a>
       </div>
 
       <!-- Hamburger dropdown -->
-      <nav class="nav-menu" aria-label="header-menu">
+      <nav class="header__nav" aria-label="header-menu">
         <input
           type="checkbox"
           id="hamburger-toggle"
-          class="hamburger-checkbox"
+          class="header__nav__toggle-input"
         />
 
-        <ul class="nav-links hamburger-links">
-          <li><a class="light-link" href="gear.html">Gear Needed</a></li>
-          <li><a class="light-link" href="difficulty.html">Difficulty Ratings</a></li>
-          <li><a class="light-link" href="locations.html">Locations</a></li>
-          <li><a class="light-link" href="anecdote.html">Personal Anecdote</a></li>
+        <ul class="header__nav__links header__nav__links--hamburger">
+          <li><a class="header__nav__link header__nav__link--light" href="gear.html">Gear Needed</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="difficulty.html">Difficulty Ratings</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="locations.html">Locations</a></li>
+          <li><a class="header__nav__link header__nav__link--light" href="anecdote.html">Personal Anecdote</a></li>
         </ul>
 
-        <label for="hamburger-toggle" class="hamburger-button"></label>
+        <label for="hamburger-toggle" class="header__nav__toggle-button"></label>
       </nav>
     </header>
     <!-- End Header -->
@@ -43,73 +43,73 @@
     <!-- Main Home Content -->
     <main>
       <!-- Hero -->
-      <section id="hero">
-        <img src="" alt="" class="hero-background" aria-hidden="true">
+      <section class="hero">
+        <img src="" alt="" class="hero__background" aria-hidden="true">
 
-        <div class="hero-text">
+        <div class="hero__text">
           <h1>The Iron Path</h1>
           <h2>A guide to modern steel-protected climbing routes</h2>
         </div>
       </section>
 
       <!-- Introduction -->
-      <section id="introduction-home">
-        <div class="intro-text-home">
+      <section class="introduction-home">
+        <div class="introduction-home__text">
           <h2>Welcome to The Iron Path</h2>
           <p>
             A <b>via ferrata</b> is a protected climbing/scrambling route that uses steel cables, ladders, and other fixed equipment to assist climbers. This website is dedicated to providing information about via ferratas, from the gear you'll need to a personal anecdote about my experience with them. Whether you're a seasoned outdoorsperson or a beginner looking to explore this exciting activity, you'll find resources here to help you prepare for your next adventure.
           </p>
         </div>
-        <div class="intro-images-home">
-          <img src="" alt="" class="intro-image-home">
-          <img src="" alt="" class="intro-image-home">
-          <img src="" alt="" class="intro-image-home">
+        <div class="introduction-home__images">
+          <img src="" alt="" class="introduction-home__image">
+          <img src="" alt="" class="introduction-home__image">
+          <img src="" alt="" class="introduction-home__image">
         </div>
       </section>
 
       <!-- Learn More -->
-      <section id="learn-more-home">
+      <section class="learn-more">
         <h2>Learn More</h2>
         
-        <div class="tile-grid">
+        <div class="learn-more__grid">
 
-          <div class="navigation-tile">
-            <div class="tile-text">
+          <div class="learn-more__tile">
+            <div class="learn-more__tile__text">
               <h3>Gear Needed</h3>
               <p>Discover the gear required for a safe and enjoyable via ferrata experience.</p>
             </div>
-            <div class="tile-arrow">
-              <p class="nav-arrow">&rarrhk;</p>
+            <div class="learn-more__tile__arrow">
+              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
             </div>
           </div>
 
-          <div class="navigation-tile">
-            <div class="tile-text">
+          <div class="learn-more__tile">
+            <div class="learn-more__tile__text">
               <h3>Difficulty Ratings</h3>
               <p>Learn about the difficulty ratings used to classify via ferrata routes.</p>
             </div>
-            <div class="tile-arrow">
-              <p class="nav-arrow">&rarrhk;</p>
+            <div class="learn-more__tile__arrow">
+              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
             </div>
           </div>
 
-          <div class="navigation-tile">
-            <div class="tile-text">
+          <div class="learn-more__tile">
+            <div class="learn-more__tile__text">
               <h3>Locations</h3>
               <p>Find popular via ferrata locations around the world.</p>
             </div>
-            <div class="tile-arrow">
-              <p class="nav-arrow">&rarrhk;</p>
+            <div class="learn-more__tile__arrow">
+              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
             </div>
           </div>
 
-          <div class="navigation-tile">
-            <div class="tile-text">
+          <div class="learn-more__tile">
+            <div class="learn-more__tile__text">
               <h3>Personal Anecdote</h3>
               <p>Read about my first via ferrata experience.</p>
             </div>
-            <div class="tile-arrow">
-              <p class="nav-arrow">&rarrhk;</p>
+            <div class="learn-more__tile__arrow">
+              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
             </div>
           </div>
 
@@ -118,26 +118,28 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-left">
+    <footer class="footer">
+      <div class="footer__left">
         <!-- Home Anchor -->
-        <div class="brand">
-          <a class="logo-text" href="index.html">The Iron Path</a>
+        <div class="footer__brand">
+          <a class="footer__brand__logo" href="index.html">The Iron Path</a>
         </div>
       </div>
 
-      <div class="footer-right">
+      <div class="footer__right">
         <!-- Footer navigation -->
-        <nav class="footer-nav-menu" aria-label="footer-menu">
-          <ul class="nav-links">
-            <li><a class="light-link" href="gear.html">Gear Needed</a></li>
-            <li><a class="light-link" href="difficulty.html">Difficulty Ratings</a></li>
-            <li><a class="light-link" href="locations.html">Locations</a></li>
-            <li><a class="light-link" href="anecdote.html">Personal Anecdote</a></li>
+        <nav class="footer__nav" aria-label="footer-menu">
+          <ul class="footer__nav__links">
+            <li><a class="footer__nav__link footer__nav__link--light" href="gear.html">Gear Needed</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="difficulty.html">Difficulty Ratings</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="locations.html">Locations</a></li>
+            <li><a class="footer__nav__link footer__nav__link--light" href="anecdote.html">Personal Anecdote</a></li>
           </ul>
         </nav>
       </div>
-        <p class="easteregg">What are you doing down here?</p>
+
+      <div class="footer__easteregg">
+        <p class="footer__easteregg--text">What are you doing down here?</p>
       </div>
     </footer>
     <!-- End Footer -->
