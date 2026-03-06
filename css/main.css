@@ -14,6 +14,7 @@
 /* 09. LOCATIONS PAGE ELEMENTS */
 /* 10. ANECDOTE PAGE ELEMENTS */
 /* 11. LAYOUT HELPERS */
+/* 12. JS STATES */
 /**/
 
 /* ============= CSS VARIABLES (COLORS, SPACING, SIZING) ============= */
@@ -23,27 +24,22 @@
   --color-cool-off-white: #e6eced;
   --color-off-black: #0f0f0f;
   --color-dark-grey: #1a1f28;
-  --color-mid-blue-lightmode: #307ad2;
-  --color-mid-blue-darkmode: #4c91e9;
-  --color-light-blue-lightmode: #4f91d7;
-  --color-light-blue-darkmode: #66a0e3;
-  --color-green-lightmode: #5a9d37;
-  --color-green-darkmode: #5bc755;
-  --color-grey-lightmode: #7c8493;
-  --color-grey-darkmode: #9ca3af;
+  --color-mid-blue-light: #307ad2;
+  --color-mid-blue-dark: #4c91e9;
+  --color-light-blue-light: #4f91d7;
+  --color-light-blue-dark: #66a0e3;
+  --color-green-light: #5a9d37;
+  --color-green-dark: #5bc755;
+  --color-grey-light: #7c8493;
+  --color-grey-dark: #9ca3af;
 
-  --color-background-lightmode: var(--color-warm-off-white);
-  --color-background-darkmode: var(--color-dark-grey);
-  --color-light-text: var(--color-cool-off-white);
+  --color-background: var(--color-warm-off-white);
   --color-dark-text: var(--color-off-black);
-  --color-accent-1-lightmode: var(--color-mid-blue-lightmode);
-  --color-accent-1-darkmode: var(--color-mid-blue-darkmode);
-  --color-accent-1light-lightmode: var(--color-light-blue-lightmode);
-  --color-accent-1light-darkmode: var(--color-light-blue-darkmode);
-  --color-accent-2-lightmode: var(--color-green-lightmode);
-  --color-accent-2-darkmode: var(--color-green-darkmode);
-  --color-accent-3-lightmode: var(--color-grey-lightmode);
-  --color-accent-3-darkmode: var(--color-grey-darkmode);
+  --color-light-text: var(--color-cool-off-white);
+  --color-accent-1: var(--color-mid-blue-light);
+  --color-accent-1-light: var(--color-light-blue-light);
+  --color-accent-2: var(--color-green-light);
+  --color-accent-3: var(--color-grey-light);
 
   /* FONT FAMILIES */
   --font-family-body: "Aleo", sans-serif;
@@ -99,6 +95,18 @@
 }
 
 /* ============= BASE STYLES (BODY, MAIN, LAYOUT) ============= */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--color-background);
+
+  transition: background-color 0.25s ease-in-out;
+}
+
+main {
+  margin: 0 auto;
+}
 
 /* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
 
@@ -115,3 +123,12 @@
 /* ============= ANECDOTE PAGE ELEMENTS ============= */
 
 /* ============= LAYOUT HELPERS ============= */
+
+/* ============= JS STATES ============= */
+.darkmode {
+  --color-background: var(--color-dark-grey);
+  --color-accent-1: var(--color-mid-blue-dark);
+  --color-accent-1-light: var(--color-light-blue-dark);
+  --color-accent-2: var(--color-green-dark);
+  --color-accent-3: var(--color-grey-dark);
+}
