@@ -13,7 +13,7 @@
 /* 08. DIFFICULTY PAGE ELEMENTS */
 /* 09. LOCATIONS PAGE ELEMENTS */
 /* 10. ANECDOTE PAGE ELEMENTS */
-/* 11. LAYOUT HELPERS */
+/* 11. HELPERS */
 /* 12. JS STATES */
 /**/
 
@@ -24,26 +24,26 @@
   --color-cool-off-white: #e6eced;
   --color-off-black: #0f0f0f;
   --color-dark-grey: #1a1f28;
-  --color-mid-blue-light: #307ad2;
-  --color-mid-blue-dark: #4c91e9;
-  --color-light-blue-light: #4f91d7;
-  --color-light-blue-dark: #66a0e3;
-  --color-green-light: #5a9d37;
-  --color-green-dark: #5bc755;
-  --color-grey-light: #7c8493;
-  --color-grey-dark: #9ca3af;
+  --color-mid-blue-dark: #307ad2;
+  --color-mid-blue-light: #4c91e9;
+  --color-light-blue-dark: #4f91d7;
+  --color-light-blue-light: #66a0e3;
+  --color-green-dark: #5a9d37;
+  --color-green-light: #5bc755;
+  --color-grey-dark: #7c8493;
+  --color-grey-light: #9ca3af;
 
   --color-background: var(--color-warm-off-white);
-  --color-dark-text: var(--color-off-black);
-  --color-light-text: var(--color-cool-off-white);
-  --color-accent-1: var(--color-mid-blue-light);
-  --color-accent-1-light: var(--color-light-blue-light);
-  --color-accent-2: var(--color-green-light);
-  --color-accent-3: var(--color-grey-light);
+  --color-text-primary: var(--color-off-black);
+  --color-text-secondary: var(--color-cool-off-white);
+  --color-accent-1: var(--color-mid-blue-dark);
+  --color-accent-1-light: var(--color-light-blue-dark);
+  --color-accent-2: var(--color-green-dark);
+  --color-accent-3: var(--color-grey-dark);
 
   /* FONT FAMILIES */
   --font-family-body: "Aleo", sans-serif;
-  --font-family-headings: "Montserrat Alternates", sans-serif;
+  --font-family-headings: "Montserrat", sans-serif;
 
   /* FONT SIZES*/
   --font-xsm: 0.75rem;
@@ -62,7 +62,7 @@
   --space-lrg: 1.5rem;
   --space-xlrg: 2rem;
   --space-2xlrg: 3rem;
-  --space-section: 6rem;
+  --space-section: 4rem;
 
   /* BORDER RADIUS (rounded corners) */
   --radius-sm: 0.25rem;
@@ -76,8 +76,10 @@
   --border-thick: 3px;
 
   /* COMPONENT SIZING */
+  --layout-max-width: 80vw;
   --width-nav-min: 128px;
   --width-hamburger-min: 200px;
+  --learn-more__tile-min-height: 200px;
 }
 
 /* ============= FONT FACES ============= */
@@ -105,14 +107,106 @@ body {
 }
 
 main {
+  max-width: var(--layout-max-width);
   margin: 0 auto;
 }
 
+section {
+  margin-bottom: var(--space-section);
+}
+
 /* ============= TYPOGRAPHY (HEADINGS, TEXT, LABELS) ============= */
+p,
+a,
+label {
+  font-family: var(--font-family-body);
+  font-size: var(--font-med);
+  font-weight: 400;
+  line-height: 1.625rem;
+
+  color: var(--color-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headings);
+  line-height: 1.25;
+  text-align: center;
+
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: var(--space-2xlrg);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-xlrg);
+  padding-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.underline-green {
+  border-bottom: var(--border-med) solid var(--color-accent-2);
+}
+.underline-blue {
+  border-bottom: var(--border-med) solid var(--color-accent-1);
+}
+
+.learn-more__tile__arrow__icon {
+  font-size: var(--font-2xlrg);
+  color: var(--color-text-secondary);
+}
 
 /* ============= BUTTONS AND INTERACTIVE ELEMENTS ============= */
 
 /* ============= HOME PAGE ELEMENTS ============= */
+
+/* Learn More Tiles */
+.learn-more__grid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: var(--space-med);
+}
+
+.learn-more__tile {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  border-style: solid;
+  border-width: var(--border-med);
+  min-height: var(--learn-more__tile-min-height);
+}
+
+.learn-more__tile__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-sm);
+
+  h3 {
+    text-align: left;
+  }
+}
+
+.learn-more__tile__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ============= GEAR PAGE ELEMENTS ============= */
 
@@ -122,11 +216,36 @@ main {
 
 /* ============= ANECDOTE PAGE ELEMENTS ============= */
 
-/* ============= LAYOUT HELPERS ============= */
+/* ============= HELPERS ============= */
+.fill-dark-blue {
+  background-color: var(--color-accent-1);
+}
+
+.fill-light-blue {
+  background-color: var(--color-accent-1-light);
+}
+
+.fill-green {
+  background-color: var(--color-accent-2);
+}
+
+.fill-grey {
+  background-color: var(--color-accent-3);
+}
+
+.outline-blue {
+  border-color: var(--color-accent-1);
+}
+
+.outline-green {
+  border-color: var(--color-accent-2);
+}
 
 /* ============= JS STATES ============= */
 .darkmode {
   --color-background: var(--color-dark-grey);
+  --color-text-primary: var(--color-cool-off-white);
+  --color-text-secondary: var(--color-off-black);
   --color-accent-1: var(--color-mid-blue-dark);
   --color-accent-1-light: var(--color-light-blue-dark);
   --color-accent-2: var(--color-green-dark);
