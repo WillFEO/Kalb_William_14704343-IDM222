@@ -590,6 +590,24 @@ footer {
 
 /* ============= ANECDOTE PAGE ELEMENTS ============= */
 
+.anecdote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xlrg);
+}
+
+.introduction-anecdote {
+  padding-bottom: var(--space-lrg);
+  border-bottom: var(--border-med) solid var(--color-accent-3-light);
+  margin-bottom: var(--space-lrg);
+}
+
+.introduction-anecdote__image,
+.anecdote__section__image {
+  width: 100%;
+  margin-bottom: var(--space-xlrg);
+}
+
 /* ============= HELPERS ============= */
 
 .fill-dark-blue {
