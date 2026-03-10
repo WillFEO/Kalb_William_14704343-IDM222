@@ -838,7 +838,7 @@ footer {
 
 .introduction-locations__image {
   margin-bottom: var(--space-lrg);
-  width: 80%;
+  width: 100%;
   border-width: var(--border-thick);
   border-style: solid;
 }
@@ -861,7 +861,7 @@ footer {
 }
 
 .locations__item__content__image {
-  width: 80%;
+  width: 100%;
   border-width: var(--border-med);
   border-style: solid;
 }
@@ -874,6 +874,10 @@ footer {
 @media (min-width: 1200px) {
   .locations__item__content {
     gap: var(--space-med);
+  }
+
+  .locations__item__content__image {
+    width: 80%;
   }
 }
 
