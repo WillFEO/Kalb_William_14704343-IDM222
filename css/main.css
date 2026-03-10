@@ -263,6 +263,9 @@ p {
 }
 
 @media (min-width: 768px) {
+  h2 {
+    margin-bottom: var(--space-lrg);
+  }
 }
 
 /* ============= BUTTONS AND INTERACTIVE ELEMENTS ============= */
@@ -441,9 +444,6 @@ footer {
   aspect-ratio: 1 / 1;
 }
 
-@media (min-width: 768px) {
-}
-
 @media (min-width: 1200px) {
   .introduction-home__content {
     display: grid;
@@ -566,7 +566,6 @@ footer {
 .gear-list__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--space-lrg);
 
   h2 {
@@ -576,7 +575,14 @@ footer {
   }
 }
 
-.gear-list__item__image {
+.gear-list__item__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lrg);
+}
+
+.gear-list__item__media__image {
   width: 80%;
   border-width: var(--border-med);
   border-style: solid;
@@ -614,6 +620,24 @@ footer {
 .gear-list__item__price {
   font-size: var(--font-3xlrg);
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .gear-list__item__media {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+  }
+
+  .gear-list__item__media__text {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .gear-list__item__media__image {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+  }
 }
 
 /* ============= DIFFICULTY PAGE ELEMENTS ============= */
