@@ -73,7 +73,7 @@
   --space-lrg: 1.5rem;
   --space-xlrg: 2rem;
   --space-2xlrg: 3rem;
-  --space-section: 4rem;
+  --space-section: 4.5rem;
 
   /* BORDER RADIUS (rounded corners) */
   --radius-sm: 0.25rem;
@@ -89,11 +89,10 @@
   /* COMPONENT SIZING */
   --layout-width: 80vw;
   --layout-max-width: 400px;
+  --hero-text-maxwidth: 400px;
   --width-nav-min: 128px;
   --width-hamburger-min: 200px;
-  --hero-height-mobile: 570px;
-  --hero-height-tablet: 620px;
-  --hero-height-desktop: 700px;
+  --hero-height: 570px;
   --learn-more__tile-min-height: 280px;
 }
 
@@ -123,7 +122,7 @@
     --space-lrg: 2rem;
     --space-xlrg: 3rem;
     --space-2xlrg: 4rem;
-    --space-section: 5rem;
+    --space-section: 6rem;
 
     /* BORDER RADIUS (rounded corners) */
 
@@ -132,6 +131,8 @@
     /* COMPONENT SIZING */
     --layout-width: 75vw;
     --layout-max-width: 700px;
+    --hero-text-maxwidth: 600px;
+    --hero-height: 620px;
   }
 }
 
@@ -170,6 +171,8 @@
     /* COMPONENT SIZING */
     --layout-width: 60vw;
     --layout-max-width: 1000px;
+    --hero-text-maxwidth: 700px;
+    --hero-height: 700px;
     --learn-more__tile-min-height: 400px;
   }
 }
@@ -406,6 +409,27 @@ footer {
   gap: var(--space-med);
 }
 
+@media (min-width: 1600px) {
+  /* Hide hamburger icon */
+  .header__nav__toggle-button {
+    display: none;
+  }
+
+  /* Turn dropdown menu into normal inline nav */
+  .header__nav__links {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    background: none;
+    padding: 0;
+
+    flex-direction: row;
+    gap: var(--space-lrg);
+  }
+}
+
 /* ============= HOME PAGE ELEMENTS ============= */
 
 /* Hero Section */
@@ -419,7 +443,7 @@ footer {
   background-repeat: no-repeat;
 
   width: 100vw;
-  min-height: var(--hero-height-mobile);
+  min-height: var(--hero-height);
 
   display: flex;
   justify-content: center;
@@ -428,6 +452,8 @@ footer {
 }
 
 .hero__text {
+  max-width: var(--hero-text-maxwidth);
+
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
   h1,
