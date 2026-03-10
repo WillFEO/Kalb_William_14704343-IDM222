@@ -22,6 +22,11 @@
 
       <!-- Hamburger dropdown -->
       <nav class="header__nav" aria-label="header-menu">
+        <button id="dark-mode-toggle" class="header__theme-toggle" aria-label="Toggle dark mode">
+          <span id="toggle-icon" class="header__theme-toggle__icon">🌙</span>
+          <span id="toggle-text" class="header__theme-toggle__text">Dark Mode</span>
+        </button>
+
         <input
           type="checkbox"
           id="hamburger-toggle"
@@ -68,8 +73,8 @@
 
       <!-- Learn More -->
       <section class="learn-more">
-        <h2 class="underline-blue">Learn More</h2>
-        
+        <h2>Learn More</h2>
+        <img src="images/index/trail-accent.svg" alt="Dotted line trail leading to an X" class="trail-accent">
         <div class="learn-more__grid">
 
           <div class="learn-more__tile learn-more__tile--gear outline-blue">
@@ -78,7 +83,7 @@
               <p>Discover the gear required for a safe and enjoyable via ferrata experience.</p>
             </div>
             <a class="learn-more__tile__arrow fill-green" href="gear.html">
-              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
+              <p class="learn-more__tile__arrow__icon">&rarrhk;&#xfe0e;</p>
             </a>
           </div>
 
@@ -88,7 +93,7 @@
               <p>Learn about the difficulty ratings used to classify via ferrata routes.</p>
             </div>
             <a class="learn-more__tile__arrow fill-green" href="difficulty.html">
-              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
+              <p class="learn-more__tile__arrow__icon">&rarrhk;&#xfe0e;</p>
             </a>
           </div>
 
@@ -98,7 +103,7 @@
               <p>Find popular via ferrata locations around the world.</p>
             </div>
             <a class="learn-more__tile__arrow fill-green" href="locations.html">
-              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
+              <p class="learn-more__tile__arrow__icon">&rarrhk;&#xfe0e;</p>
             </a>
           </div>
 
@@ -108,7 +113,7 @@
               <p>Read about my first via ferrata experience.</p>
             </div>
             <a class="learn-more__tile__arrow fill-green" href="anecdote.html">
-              <p class="learn-more__tile__arrow__icon">&rarrhk;</p>
+              <p class="learn-more__tile__arrow__icon">&rarrhk;&#xfe0e;</p>
             </a>
           </div>
 
@@ -139,4 +144,5 @@
     </footer>
     <!-- End Footer -->
   </body>
+  <script src="main.js"></script>
 </html>
