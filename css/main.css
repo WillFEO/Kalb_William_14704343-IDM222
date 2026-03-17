@@ -601,6 +601,12 @@ footer {
   aspect-ratio: 1 / 1;
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    background-image: url(../images/index/hero-desktop.webp);
+  }
+}
+
 @media (min-width: 1600px) {
   .introduction-home__content {
     display: grid;
