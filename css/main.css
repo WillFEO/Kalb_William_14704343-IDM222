@@ -256,11 +256,11 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-
   width: 100%;
   overflow-x: hidden;
+
+  margin: 0;
+  padding: 0;
 
   background-color: var(--color-background);
 
@@ -270,6 +270,7 @@ body {
 main {
   width: var(--layout-width);
   max-width: var(--layout-max-width);
+
   margin: 0 auto;
 }
 
@@ -287,7 +288,6 @@ label {
   font-size: var(--font-med);
   font-weight: 400;
   line-height: var(--font-line-height);
-
   color: var(--text-on-page);
 }
 
@@ -308,26 +308,25 @@ h6 {
   font-family: var(--font-family-headings);
   line-height: var(--heading-line-height);
   text-align: center;
-
   color: var(--text-on-page);
 }
 
 h1 {
-  font-size: var(--heading-1);
   margin-top: var(--space-section);
   margin-bottom: var(--space-2xlrg);
+  font-size: var(--heading-1);
 }
 
 h2 {
-  font-size: var(--heading-2);
   margin-bottom: var(--space-xlrg);
   padding-bottom: var(--space-xsm);
+  font-size: var(--heading-2);
 }
 
 h3 {
-  font-size: var(--heading-3);
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-2xsm);
+  font-size: var(--heading-3);
 }
 
 p {
@@ -411,10 +410,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   height: fit-content;
 
   padding: var(--space-lrg);
-
   border-bottom: var(--border-thick) solid var(--color-accent-2);
 }
 
@@ -448,11 +447,10 @@ header {
   right: 0;
 
   margin: 0;
-
-  background-color: var(--color-accent-1);
-
   padding: var(--space-xlrg) var(--space-lrg) var(--space-xlrg)
     var(--space-2xlrg);
+
+  background-color: var(--color-accent-1);
 
   opacity: 0;
   visibility: hidden;
@@ -468,18 +466,20 @@ header {
 }
 
 .header__nav {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  width: 100%;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
-  height: fit-content;
-  padding: var(--space-lrg);
 
+  height: fit-content;
+
+  padding: var(--space-lrg);
   border-top: var(--border-thick) solid var(--color-accent-2);
 }
 
@@ -499,15 +499,16 @@ footer {
   /* Turn dropdown menu into normal inline nav */
   .header__nav__links {
     position: static;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-
-    background: none;
-    padding: 0;
 
     flex-direction: row;
     gap: var(--space-lrg);
+
+    padding: 0;
+    background: none;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -550,9 +551,10 @@ footer {
   }
 
   h2 {
-    font-size: var(--heading-3);
     margin-bottom: var(--space-sm);
     padding-bottom: var(--space-2xsm);
+
+    font-size: var(--heading-3);
   }
 }
 
@@ -591,10 +593,11 @@ footer {
 }
 
 .introduction-home__image {
-  width: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
+
+  width: 100%;
 }
 
 .introduction-home__image--square {
@@ -652,6 +655,7 @@ footer {
 
 .trail-accent {
   width: 80%;
+
   margin-bottom: var(--space-xlrg);
 }
 
@@ -679,10 +683,12 @@ footer {
 }
 
 .learn-more__tile::before {
-  content: "";
   position: absolute;
   inset: 0;
+
   background: rgba(255, 252, 244, 0.6);
+
+  content: "";
 }
 
 .learn-more__tile__text {
@@ -777,8 +783,10 @@ footer {
 
   h2 {
     width: 100%;
-    text-align: left;
+
     margin-bottom: var(--space-xsm);
+
+    text-align: left;
   }
 }
 
@@ -876,12 +884,15 @@ footer {
   display: flex;
   align-items: center;
   gap: var(--space-lrg);
+
   width: 100%;
 
   h2 {
     width: 100%;
-    text-align: left;
+
     margin-bottom: 0;
+
+    text-align: left;
   }
 }
 
@@ -895,9 +906,10 @@ footer {
   background-color: var(--color-accent-1);
 
   .letter-level {
-    font-size: var(--heading-3);
     margin-bottom: var(--space-2xsm);
     padding: 0;
+
+    font-size: var(--heading-3);
     color: var(--text-light);
     font-family: var(--font-family-headings);
     line-height: var(--heading-line-height);
@@ -911,7 +923,9 @@ footer {
 
   h2 {
     height: fit-content;
+
     padding: var(--space-2xsm) var(--space-lrg);
+
     font-size: var(--font-3xlrg);
     font-weight: 800;
     color: var(--text-light);
@@ -965,6 +979,7 @@ footer {
 
 .introduction-locations__image {
   width: 80%;
+
   margin-bottom: var(--space-lrg);
 
   border-width: var(--border-thick);
@@ -997,6 +1012,7 @@ footer {
 
 .locations__item__content__text {
   width: fit-content;
+
   text-align: left;
 }
 
@@ -1035,7 +1051,6 @@ footer {
 .introduction-anecdote {
   padding-bottom: var(--space-xlrg);
   margin-bottom: var(--space-xlrg);
-
   border-bottom: var(--border-med) solid var(--color-accent-3-light);
 }
 
@@ -1133,8 +1148,8 @@ html.light {
 
   margin-right: var(--space-med);
   padding: var(--space-xsm) var(--space-xsm);
-
   border: var(--border-med) solid var(--color-accent-1-light);
+
   background: none;
   cursor: pointer;
 
