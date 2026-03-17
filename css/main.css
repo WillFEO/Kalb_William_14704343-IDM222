@@ -418,51 +418,9 @@ header {
   border-bottom: var(--border-thick) solid var(--color-accent-2);
 }
 
-/* Theme Toggle Button */
-.header__theme-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2xsm);
-
-  margin-right: var(--space-med);
-  padding: var(--space-xsm) var(--space-xsm);
-
-  border: var(--border-med) solid var(--color-accent-1-light);
-  background: none;
-  cursor: pointer;
-
-  font-family: var(--font-family-body);
-  font-size: var(--font-lrg);
-  color: var(--text-on-header);
-
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.header__theme-toggle__icon {
-  display: inline-block;
-  font-size: var(--font-lrg);
-}
-
-.header__theme-toggle__text {
-  white-space: nowrap;
-}
-
-@media (max-width: 500px) {
-  .header__theme-toggle__text {
-    display: none;
-  }
-
-  .header__theme-toggle {
-    margin-right: var(--space-xsm);
-  }
-}
-
-@media (max-width: 370px) {
-  .header__theme-toggle {
-    margin-right: 0;
-  }
+/* Theme Toggle Checkbox */
+.theme-toggle__input {
+  display: none;
 }
 
 .header__nav__toggle-input {
@@ -582,13 +540,19 @@ footer {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 
   h1,
-  h3 {
+  h2 {
     color: var(--text-light);
   }
 
   h1 {
     margin-top: 0;
     margin-bottom: var(--space-sm);
+  }
+
+  h2 {
+    font-size: var(--heading-3);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-2xsm);
   }
 }
 
@@ -924,10 +888,15 @@ footer {
 
   background-color: var(--color-accent-1);
 
-  h3 {
+  .letter-level {
+    font-size: var(--heading-3);
     margin-bottom: var(--space-2xsm);
     padding: 0;
     color: var(--text-light);
+    font-family: var(--font-family-headings);
+    line-height: var(--heading-line-height);
+    text-align: center;
+    font-weight: 700;
   }
 }
 
@@ -972,7 +941,7 @@ footer {
   .difficulty-scale__level__heading__letter-tile {
     padding: var(--space-2xsm) var(--space-xsm);
 
-    h3 {
+    .letter-level {
       margin-bottom: 0;
     }
   }
@@ -1107,9 +1076,16 @@ footer {
 }
 
 /* ================================= */
-/* DARK MODE */
+/* DARK MODE - CSS-ONLY WITH CHECKBOX */
 /* ================================= */
-body.darkmode {
+
+/* Hidden checkbox for theme toggle */
+.theme-toggle__input {
+  display: none;
+}
+
+/* Apply dark mode when html has dark class (persists across pages) */
+html.dark {
   --color-background: var(--color-dark-grey);
   --text-on-page: var(--color-cool-off-white);
   --color-accent-1: var(--color-mid-blue-light);
@@ -1117,4 +1093,84 @@ body.darkmode {
   --color-accent-2: var(--color-green-light);
   --color-accent-3: var(--color-grey-light);
   --color-accent-3-light: var(--color-light-grey-light);
+}
+
+/* Fallback: Apply dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  html:not(.dark) {
+    --color-background: var(--color-dark-grey);
+    --text-on-page: var(--color-cool-off-white);
+    --color-accent-1: var(--color-mid-blue-light);
+    --color-accent-1-light: var(--color-light-blue-light);
+    --color-accent-2: var(--color-green-light);
+    --color-accent-3: var(--color-grey-light);
+    --color-accent-3-light: var(--color-light-grey-light);
+  }
+}
+
+/* Theme toggle label styling */
+.header__theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xsm);
+
+  margin-right: var(--space-med);
+  padding: var(--space-xsm) var(--space-xsm);
+
+  border: var(--border-med) solid var(--color-accent-1-light);
+  background: none;
+  cursor: pointer;
+
+  font-family: var(--font-family-body);
+  font-size: var(--font-lrg);
+  color: var(--text-on-header);
+}
+
+.header__theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Icon updates via CSS content */
+.header__theme-toggle__icon {
+  display: inline-block;
+  font-size: var(--font-lrg);
+  min-width: 1.25rem;
+}
+
+.header__theme-toggle__icon::before {
+  content: "🌙";
+}
+
+.theme-toggle__input:checked ~ label .header__theme-toggle__icon::before {
+  content: "☀️";
+}
+
+/* Text label updates via CSS content */
+.header__theme-toggle__text {
+  white-space: nowrap;
+}
+
+.header__theme-toggle__text::after {
+  content: "Dark Mode";
+}
+
+.theme-toggle__input:checked ~ label .header__theme-toggle__text::after {
+  content: "Light Mode";
+}
+
+/* Responsive: Hide text on smaller screens */
+@media (max-width: 500px) {
+  .header__theme-toggle__text {
+    display: none;
+  }
+
+  .header__theme-toggle {
+    margin-right: var(--space-xsm);
+  }
+}
+
+@media (max-width: 370px) {
+  .header__theme-toggle {
+    margin-right: 0;
+  }
 }

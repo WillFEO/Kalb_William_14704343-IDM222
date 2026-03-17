@@ -10,6 +10,9 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Dark/Light Mode Preload-->
+    <script src="preload.js"></script>
   </head>
   <body>
     <!-- ========== HEADER ========== -->
@@ -21,16 +24,16 @@
 
       <!-- Hamburger dropdown -->
       <nav class="header__nav" aria-label="header-menu">
-        <button
-          id="dark-mode-toggle"
-          class="header__theme-toggle"
+        <input
+          type="checkbox"
+          id="theme-toggle"
+          class="theme-toggle__input"
           aria-label="Toggle dark mode"
-        >
-          <span id="toggle-icon" class="header__theme-toggle__icon">🌙</span>
-          <span id="toggle-text" class="header__theme-toggle__text"
-            >Dark Mode</span
-          >
-        </button>
+        />
+        <label for="theme-toggle" class="header__theme-toggle">
+          <span class="header__theme-toggle__icon"></span>
+          <span class="header__theme-toggle__text"></span>
+        </label>
 
         <input
           type="checkbox"
