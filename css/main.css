@@ -1101,9 +1101,20 @@ html.dark {
   --color-accent-3-light: var(--color-light-grey-light);
 }
 
-/* Fallback: Apply dark mode based on system preference */
+/* Apply light mode when html has light class */
+html.light {
+  --color-background: var(--color-warm-off-white);
+  --text-on-page: var(--color-off-black);
+  --color-accent-1: var(--color-mid-blue-dark);
+  --color-accent-1-light: var(--color-light-blue-dark);
+  --color-accent-2: var(--color-green-dark);
+  --color-accent-3: var(--color-grey-dark);
+  --color-accent-3-light: var(--color-light-grey-dark);
+}
+
+/* Fallback: Apply dark mode based on system preference (only if user hasn't made explicit choice) */
 @media (prefers-color-scheme: dark) {
-  html:not(.dark) {
+  html:not(.dark):not(.light) {
     --color-background: var(--color-dark-grey);
     --text-on-page: var(--color-cool-off-white);
     --color-accent-1: var(--color-mid-blue-light);
