@@ -133,7 +133,7 @@
     --font-xlrg: 2rem;
     --font-2xlrg: 2.5rem;
     --font-3xlrg: 3rem;
-    --font-line-height: 1.5;
+    --font-line-height: 1.6;
 
     /* ---------- HEADING SIZES ---------- */
 
@@ -173,7 +173,7 @@
     --font-xlrg: 2.5rem;
     --font-2xlrg: 3rem;
     --font-3xlrg: 4rem;
-    --font-line-height: 1.5;
+    --font-line-height: 1.6;
 
     /* ---------- HEADING SIZES ---------- */
 
@@ -1105,7 +1105,7 @@ footer {
   display: none;
 }
 
-/* Apply dark mode when html has dark class (persists across pages) */
+/* Apply dark mode when html has dark class */
 html.dark {
   --color-background: var(--color-dark-grey);
   --text-on-page: var(--color-cool-off-white);
