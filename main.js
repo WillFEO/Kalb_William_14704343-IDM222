@@ -1,14 +1,11 @@
 const themeToggle = document.getElementById("theme-toggle");
+const savedTheme = localStorage.getItem("theme");
 
 // Restore theme preference from localStorage, or use system preference
 // savedTheme is already declared from preload.js
 if (savedTheme === "dark") {
-  document.documentElement.classList.add("dark");
-  document.documentElement.classList.remove("light");
   themeToggle.checked = true;
 } else if (savedTheme === "light") {
-  document.documentElement.classList.add("light");
-  document.documentElement.classList.remove("dark");
   themeToggle.checked = false;
 } else {
   // No saved preference, let system preference take over (don't add any class)
